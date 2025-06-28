@@ -1,0 +1,80 @@
+.about-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-text {
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 3rem;
+
+    }
+
+    p {
+        width: 50%;
+        margin: 0 auto;
+        text-align: left;
+        font-size: 1.2rem;
+        margin-bottom: 60px;     
+    }
+}
+
+
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    width: 80%;
+}
+
+
+.skills-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f1f1f1;
+}
+
+.skills-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.skills-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.skills-header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+
+    .info {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+    }   
+}
+
+.githubinfo-container {
+    margin-top: 70px;
+    p {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+

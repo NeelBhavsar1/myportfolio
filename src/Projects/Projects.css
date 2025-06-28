@@ -1,0 +1,18 @@
+.projects-info {
+    margin-top: 100px;
+}
+
+.projects-info h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: calc(5 * 300px);
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
