@@ -1,0 +1,50 @@
+.footer {
+  background-color: #374151;
+  color: #ffffff;
+  padding: 15px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-logo-info {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 220px;
+  object-fit: contain;
+}
+
+.footer-description {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #9ca3af;
+}
+
+.footer-trademark {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.footer-trademark p {
+    font-size: 18px;
+    font-weight: 600;
+}
+

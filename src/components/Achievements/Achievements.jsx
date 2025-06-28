@@ -2,7 +2,7 @@ import React from 'react'
 import './Achievements.css'
 import hackathon_photo from '../../assets/hackphoto.png'
 import publichealth_photo from '../../assets/publicphoto.jpg'
-import rep_icon from '../../assets/UOL.jpeg'
+import rep_icon from '../../assets/UOL.jpg'
 
 
 
