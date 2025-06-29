@@ -3,7 +3,7 @@ import './Home.css';
 import profile_image from '../../assets/profile.jpeg';
 import linkedin_icon from '../../assets/linkedin.png';
 import github_icon from '../../assets/github.png';
-import bgvideo from '../../assets/homebg2.mov'
+
 
 
 import { motion } from 'framer-motion';
