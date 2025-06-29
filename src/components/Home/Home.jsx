@@ -3,10 +3,11 @@ import './Home.css';
 import profile_image from '../../assets/profile.jpeg';
 import linkedin_icon from '../../assets/linkedin.png';
 import github_icon from '../../assets/github.png';
-import backgroundvideo from '../../assets/homebg1.mp4';
+
 import { motion } from 'framer-motion';
 
 const Home = () => {
+
   const linkedinHandler = () => {
     window.open('https://www.linkedin.com/in/neel-bhavsar-767532238/', '_blank');
   };
@@ -29,7 +30,7 @@ const Home = () => {
         muted
         playsInline
       >
-        <source src={backgroundvideo} type="video/mp4" />
+        <source src="/myportfolio/videos/homebg1.mp4" type="video/mp4" />
       </video>
 
       <img src={profile_image} alt="profile photo" className="profile-photo" />
