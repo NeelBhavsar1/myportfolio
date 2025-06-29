@@ -32,7 +32,7 @@ const Home = () => {
         muted
         playsInline
       >
-        <source src="/myportfolio/videos/homebg1.mp4" type="video/mp4" />
+        <source src="/videos/homebg1.mp4" type="video/mp4" />
       </video>
 
       <img src={profile_image} alt="profile photo" className="profile-photo" />
