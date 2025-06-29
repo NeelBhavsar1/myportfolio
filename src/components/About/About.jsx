@@ -36,7 +36,9 @@ const About = () => {
 
       <div className="githubinfo-container">
         <p>Days I code</p>
-        <GitHubCalendar username="NeelBhavsar1" className="github" />
+        <div className="github-calendar-wrapper">
+          <GitHubCalendar username="NeelBhavsar1" className="github" />
+        </div>
       </div>
     </div>
   )

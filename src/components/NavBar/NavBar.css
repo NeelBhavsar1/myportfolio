@@ -1,59 +1,67 @@
 .navbar-wrapper {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0;
   width: 100%;
+  z-index: 10000;
+  background-color: transparent;
+  border-bottom: none;
   transition: all 0.5s ease;
-  
+  padding: 10px 0;
 }
 
 .navbar-wrapper.scrolled {
   border-bottom: 1px solid rgba(17, 24, 39, 0.2);
-  background-color: rgba(255, 255, 255, 0.8); 
+  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 170px;
+
+  
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .logo img {
-    height: 120px;
-    width: 120px;
+  height: 120px;
+  width: 120px;
+  max-width: 100%; 
+  height: auto;
 }
 
 .navlinks {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
+
 .navlinks ul {
-    display: flex;
-    gap: 60px;
-    font-size: 20px;
-    list-style-type: none;
-    align-items: center;
-    border: 1px solid black;
-    padding: 10px 20px;
-    border-radius: 40px;
-
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    border: 1px solid rgba(17, 24, 39, 0.2); 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 60px;
+  font-size: 20px;
+  list-style-type: none;
+  align-items: center;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(17, 24, 39, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 10px 20px;
 }
+
 .navlinks ul li {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .navlinks ul li a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .connect button {
@@ -62,12 +70,10 @@
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
   font-size: 18px;
   padding: 13px 24px;
   color: #111827;
   cursor: pointer;
-
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
@@ -79,3 +85,121 @@
 }
 
 
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    margin: 0 40px;
+  }
+  .navlinks ul {
+    gap: 40px;
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+  .connect button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  .logo img {
+    height: 90px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0 20px;
+  }
+
+  .logo img {
+    height: 70px;
+    width: 70px;
+  }
+
+  .navlinks {
+    display: none; 
+  }
+
+  .connect {
+    display: none; 
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease forwards;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 70px; 
+    z-index: 9999;
+  }
+
+  .mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .mobile-menu li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    color: #111;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+
+  .mobile-menu a:hover {
+    color: #2563eb;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 0 10px;
+  }
+  .logo img {
+    height: 60px;
+    width: 60px;
+  }
+  .mobile-menu {
+    top: 60px;
+    padding: 15px;
+  }
+  .mobile-menu a {
+    font-size: 16px;
+  }
+}
+
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -3,6 +3,7 @@ import './Home.css';
 import profile_image from '../../assets/profile.jpeg';
 import linkedin_icon from '../../assets/linkedin.png';
 import github_icon from '../../assets/github.png';
+import bgvideo from '../../assets/homebg2.mov'
 
 
 import { motion } from 'framer-motion';
@@ -36,7 +37,7 @@ const Home = () => {
 
       <img src={profile_image} alt="profile photo" className="profile-photo" />
 
-      <h1 style={{ display: 'flex', justifyContent: 'center', gap: '8px' }}>
+      <h1>
         <motion.span
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -51,9 +52,10 @@ const Home = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className='worker'>Neel Bhavsar</span>
+          <span className="worker">Neel Bhavsar</span>
         </motion.span>
       </h1>
+
 
       <p>
         Computer Science student @ University of Liverpool. <br /> Aspiring front-end developer.

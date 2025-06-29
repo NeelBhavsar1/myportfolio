@@ -1,7 +1,7 @@
 .footer {
   background-color: #374151;
   color: #ffffff;
-  padding: 15px 20px;
+  padding: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -10,7 +10,7 @@
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -19,7 +19,7 @@
   flex: 1 1 250px;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 10px;
   align-items: center;
   text-align: center;
 }
@@ -31,20 +31,75 @@
 
 .footer-description {
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.5;
   color: #9ca3af;
+  max-width: 90%;
 }
 
 .footer-trademark {
   flex-basis: 100%;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 0.9rem;
   color: #6b7280;
 }
 
 .footer-trademark p {
-    font-size: 18px;
-    font-weight: 600;
+  font-size: 18px;
+  font-weight: 600;
 }
 
+
+@media (max-width: 1024px) {
+  .footer-logo {
+    width: 180px;
+  }
+
+  .footer-description {
+    font-size: 0.95rem;
+  }
+
+  .footer-trademark p {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: 160px;
+  }
+
+  .footer-description {
+    font-size: 0.9rem;
+  }
+
+  .footer-trademark {
+    margin-top: 15px;
+  }
+
+  .footer-trademark p {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .footer-logo {
+    width: 140px;
+  }
+
+  .footer-description {
+    font-size: 0.85rem;
+  }
+
+  .footer-trademark p {
+    font-size: 14px;
+  }
+}

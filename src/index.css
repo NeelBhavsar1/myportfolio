@@ -10,6 +10,7 @@
 body {
   height: 100vh;
   background-color: #F9FAFB;
+  overflow-x: hidden;
 }
 
 section {
@@ -19,4 +20,6 @@ section {
 html {
   scroll-behavior: smooth;
 }
+
+
 
