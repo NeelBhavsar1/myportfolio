@@ -7,7 +7,7 @@
 }
 
 .background-video {
-  position: absolute; /*change to fixed to allow consistent playing*/
+  position: absolute; 
   top: 50%;
   left: 50%;
   width: 100vw;
@@ -35,7 +35,7 @@
     font-weight: 600;
 }
 
-.home-container h1 span {
+.home-container h1 span.worker {
   background: linear-gradient(90deg, #6b7280, #9ca3af, #d1d5db, #6b7280); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;     
