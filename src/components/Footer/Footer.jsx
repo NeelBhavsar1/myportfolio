@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="footer-logo-info">
           <img src={logo} alt="Logo" className="footer-logo" />
           <p className="footer-description">
-            Computer Science student & aspiring full-stack developer, building clean and modern web applications.
+            Computer Science student & aspiring front-end developer, building clean and modern web applications.
           </p>
         </div>
 

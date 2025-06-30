@@ -6,6 +6,7 @@ import github_icon from '../../assets/github.png';
 
 
 
+
 import { motion } from 'framer-motion';
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: 'easeOut' }}
     >
+      
       <video
         className="background-video"
         autoPlay
@@ -32,7 +34,7 @@ const Home = () => {
         muted
         playsInline
       >
-        <source src="/videos/homebg1.mp4" type="video/mp4" />
+        <source src="/homebg1.mp4" type="video/mp4" />
       </video>
 
       <img src={profile_image} alt="profile photo" className="profile-photo" />
