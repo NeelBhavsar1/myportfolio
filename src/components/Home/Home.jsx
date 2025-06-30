@@ -3,10 +3,6 @@ import './Home.css';
 import profile_image from '../../assets/profile.jpeg';
 import linkedin_icon from '../../assets/linkedin.png';
 import github_icon from '../../assets/github.png';
-
-
-
-
 import { motion } from 'framer-motion';
 
 const Home = () => {
@@ -34,7 +30,7 @@ const Home = () => {
         muted
         playsInline
       >
-        <source src="/homebg1.mp4" type="video/mp4" />
+        <source src={`${import.meta.env.BASE_URL}homebg1.mp4`} type="video/mp4" />
       </video>
 
       <img src={profile_image} alt="profile photo" className="profile-photo" />
