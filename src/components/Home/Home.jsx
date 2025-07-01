@@ -4,6 +4,7 @@ import profile_image from '../../assets/profile.jpeg';
 import linkedin_icon from '../../assets/linkedin.png';
 import github_icon from '../../assets/github.png';
 import { motion } from 'framer-motion';
+import Balatro from '../Balatro/Balatro';
 
 const Home = () => {
 
@@ -22,16 +23,16 @@ const Home = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: 'easeOut' }}
     >
-      
-      <video
-        className="background-video"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src={`${import.meta.env.BASE_URL}homebg1.mp4`} type="video/mp4" />
-      </video>
+      <Balatro
+        isRotate={false}
+        mouseInteraction={false}
+        pixelFilter={2000}
+        color1="#ffffff"
+        color2="#d4d4d4"
+        color3="#f0f0f0"
+        contrast={2.8}
+        lighting={0.2}
+      />
 
       <img src={profile_image} alt="profile photo" className="profile-photo" />
 
