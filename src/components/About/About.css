@@ -210,3 +210,7 @@
     transform: scale(0.30);
   }
 }
+
+#about {
+  scroll-margin-top: 80px;
+}

@@ -6,6 +6,7 @@ import Projects from './Projects/Projects'
 import Achievements from './components/Achievements/Achievements'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
+import { motion } from 'framer-motion'
 
 const App = () => {
   return (
@@ -16,17 +17,67 @@ const App = () => {
         <Home />
       </section>
       
-      <section id="about">
+      <motion.section 
+      id="about"
+      initial={{opacity: 0,
+        y: 60,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration:0.8,
+        ease:'backInOut'
+      }}
+      viewport={{
+        once: true,
+        amount: 0.3,
+      }}
+      >
         <About />
-      </section>
+      </motion.section>
       
-      <section id="projects">
+      <motion.section id="projects"
+      initial={{
+        opacity:0,
+        x:-100,
+      }}
+      whileInView={{
+        opacity:1,
+        x: 0,
+      }}
+      transition={{
+        duration:1,
+      }}
+      viewport={{
+        once:true,
+        amount:0.3,
+      }}
+      >
         <Projects />
-      </section>
+      </motion.section>
       
-      <section id="achievements">
+      <motion.section 
+      id="achievements"
+      initial={{
+        x:100,
+        opacity:0,
+      }}
+      whileInView={{
+        x:0,
+        opacity:1,
+      }}
+      transition={{
+        duration:1,
+      }}
+      viewport={{
+        once:true,
+        amount:0.3,
+      }}
+      >
         <Achievements />
-      </section>
+      </motion.section>
       
       <section id="contact">
         <Contact />

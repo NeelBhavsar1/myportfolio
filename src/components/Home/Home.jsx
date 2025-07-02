@@ -43,7 +43,7 @@ const Home = () => {
           transition={{ duration: 1 }}
           style={{ color: 'black' }}
         >
-          I'm
+          I'm&nbsp;
         </motion.span>
 
         <motion.span
@@ -51,7 +51,7 @@ const Home = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className="worker">Neel Bhavsar</span>
+          <span className="worker"> Neel Bhavsar</span>
         </motion.span>
       </h1>
 

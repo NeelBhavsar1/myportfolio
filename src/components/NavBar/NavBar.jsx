@@ -53,7 +53,11 @@ const NavBar = () => {
         </div>
 
         <div className="connect">
-          <button onClick={connectHandler}>Connect with me!</button>
+          <motion.button 
+          onClick={connectHandler}
+          whileTap={{scale:0.95, rotate: -5}}
+          
+          >Connect with me!</motion.button>
         </div>
 
         <div className="hamburger-icon" onClick={toggleMenu}>
