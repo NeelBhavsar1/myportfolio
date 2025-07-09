@@ -7,18 +7,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  height: 100vh;
-  background-color: #F9FAFB;
+html, body {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
-}
-
-section {
-  scroll-margin-top: 80px;
-}
-
-html {
-  scroll-behavior: smooth;
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F9FAFB;
 }
 
 

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './NavBar.css';
 import logo_icon from '../../assets/logo.png';
-import { FiMenu, FiX } from 'react-icons/fi'; 
+import { FiMenu, FiX } from 'react-icons/fi';
+import lenis from '../../lenis';
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -13,22 +14,34 @@ const NavBar = () => {
   };
 
   const handleScroll = () => {
-    const offset = window.scrollY;
-    if (offset > 50) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
+    setScrolled(window.scrollY > 50);
   };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
+
+
+  const scrollToSection = (e, targetId) => {
+    e.preventDefault();
+    const section = document.querySelector(targetId);
+    if (section) {
+      lenis.scrollTo(section, {offset: -90});
+    }
+    closeMenu();
+  };
+
+  const links = [
+    { label: 'Home', target: '#home' },
+    { label: 'About', target: '#about' },
+    { label: 'Projects', target: '#projects' },
+    { label: 'Achievements', target: '#achievements' },
+    { label: 'Contact', target: '#contact' },
+  ];
 
   return (
     <motion.div
@@ -39,25 +52,28 @@ const NavBar = () => {
     >
       <div className="container">
         <div className="logo">
-          <img src={logo_icon} alt="logo" />
+          <a href="#home" onClick={(e) => scrollToSection(e, '#home')}>
+            <img src={logo_icon} alt="logo" />
+          </a>
         </div>
 
         <div className="navlinks">
           <ul>
-            <li><a href="#home" onClick={closeMenu}>Home</a></li>
-            <li><a href="#about" onClick={closeMenu}>About</a></li>
-            <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
-            <li><a href="#achievements" onClick={closeMenu}>Achievements</a></li>
-            <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+            {links.map(({ label, target }) => (
+              <li key={target}>
+                <a href={target} onClick={(e) => scrollToSection(e, target)}>{label}</a>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div className="connect">
           <motion.button 
-          onClick={connectHandler}
-          whileTap={{scale:0.95, rotate: -5}}
-          
-          >Connect with me!</motion.button>
+            onClick={connectHandler}
+            whileTap={{ scale: 0.95, rotate: -5 }}
+          >
+            Connect with me!
+          </motion.button>
         </div>
 
         <div className="hamburger-icon" onClick={toggleMenu}>
@@ -68,11 +84,11 @@ const NavBar = () => {
       {menuOpen && (
         <div className="mobile-menu">
           <ul>
-            <li><a href="#home" onClick={closeMenu}>Home</a></li>
-            <li><a href="#about" onClick={closeMenu}>About</a></li>
-            <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
-            <li><a href="#achievements" onClick={closeMenu}>Achievements</a></li>
-            <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+            {links.map(({ label, target }) => (
+              <li key={target}>
+                <a href={target} onClick={(e) => scrollToSection(e, target)}>{label}</a>
+              </li>
+            ))}
           </ul>
         </div>
       )}

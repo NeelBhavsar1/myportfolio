@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';            // <-- import motion
 import './Projects.css';
 import ProjectCard from './ProjectCard/ProjectCard';
 
@@ -9,48 +10,72 @@ import weatherapp_icon from '../assets/weather.png';
 import hashing_icon from '../assets/hashing.png';
 import otherprojects_icon from '../assets/github.png';
 
+import { cardvar, containervar } from '../anims';   
+
 const Projects = () => {
+  const projects = [
+    {
+      name: "Chat App",
+      desc: "A real-time chat app built with React and Firebase, featuring authentication, dynamic chat rooms, and instant messaging.",
+      link: "https://github.com/NeelBhavsar1/chatapp",
+      photo: chatapp_icon,
+    },
+    {
+      name: "ReflexZone",
+      desc: "A React-based aim trainer with game modes like precision shooting and reaction time tests.",
+      link: "https://github.com/NeelBhavsar1/reflexzone",
+      photo: reflexzone_icon,
+    },
+    {
+      name: "Computer Vision & GAI",
+      desc: "Hackathon MVP using computer vision and generative AI to enhance art engagement.",
+      link: "https://github.com/NeelBhavsar1/BME-Hackathon-SmartMuseum/tree/main",
+      photo: hackathon_icon,
+    },
+    {
+      name: "Weather App",
+      desc: "Weather app built with React and OpenWeatherMap API, focused on clean API handling and state.",
+      link: "https://github.com/NeelBhavsar1/react-weatherapplication",
+      photo: weatherapp_icon,
+    },
+    {
+      name: "Java Hashing GUI",
+      desc: "Java Swing GUI for hashing passwords using SHA-256 and MD5 with user-friendly controls.",
+      link: "https://github.com/NeelBhavsar1/GUI--hashing-algorithms",
+      photo: hashing_icon,
+    },
+    {
+      name: "Other Projects",
+      desc: "Explore more of my work on GitHub!",
+      link: "https://github.com/NeelBhavsar1",
+      photo: otherprojects_icon,
+    },
+  ];
+
   return (
     <div className="projects-section">
       <h1>My Projects</h1>
-      <div className="projects-grid">
-        <ProjectCard
-          name="Chat App"
-          desc="A real-time chat app built with React and Firebase, featuring authentication, dynamic chat rooms, and instant messaging."
-          link="https://github.com/NeelBhavsar1/chatapp"
-          photo={chatapp_icon}
-        />
-        <ProjectCard
-          name="ReflexZone"
-          desc="A React-based aim trainer with game modes like precision shooting and reaction time tests."
-          link="https://github.com/NeelBhavsar1/reflexzone"
-          photo={reflexzone_icon}
-        />
-        <ProjectCard
-          name="Computer Vision & GAI"
-          desc="Hackathon MVP using computer vision and generative AI to enhance art engagement."
-          link="https://github.com/NeelBhavsar1/BME-Hackathon-SmartMuseum/tree/main"
-          photo={hackathon_icon}
-        />
-        <ProjectCard
-          name="Weather App"
-          desc="Weather app built with React and OpenWeatherMap API, focused on clean API handling and state."
-          link="https://github.com/NeelBhavsar1/react-weatherapplication"
-          photo={weatherapp_icon}
-        />
-        <ProjectCard
-          name="Java Hashing GUI"
-          desc="Java Swing GUI for hashing passwords using SHA-256 and MD5 with user-friendly controls."
-          link="https://github.com/NeelBhavsar1/GUI--hashing-algorithms"
-          photo={hashing_icon}
-        />
-        <ProjectCard
-          name="Other Projects"
-          desc="Explore more of my work on GitHub!"
-          link="https://github.com/NeelBhavsar1"
-          photo={otherprojects_icon}
-        />
-      </div>
+      <motion.div
+        className="projects-grid"
+        variants={containervar}         
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {projects.map(({ name, desc, link, photo }) => (
+          <motion.div
+            key={name}
+            variants={cardvar}           
+          >
+            <ProjectCard
+              name={name}
+              desc={desc}
+              link={link}
+              photo={photo}
+            />
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };

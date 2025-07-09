@@ -5,6 +5,7 @@ import linkedin_icon from '../../assets/linkedin.png';
 import github_icon from '../../assets/github.png';
 import { motion } from 'framer-motion';
 import Balatro from '../Balatro/Balatro';
+import TypeWriter from 'typewriter-effect'
 
 const Home = () => {
 
@@ -57,7 +58,21 @@ const Home = () => {
 
 
       <p>
-        Computer Science student @ University of Liverpool. <br /> Aspiring front-end developer.
+        <TypeWriter
+          options={{
+            strings: [
+              "Computer Science student @ University of Liverpool",
+              "Aspiring front-end developer",
+              "Open to collaboration and new opportunities",
+              "Lifelong learner and tech enthusiast."
+            ],
+            autoStart: true,
+            loop: true,
+            cursor: '|',
+            delay: 70,
+            deleteSpeed: 20,
+    }}
+  />
       </p>
 
       <div className="social-link">

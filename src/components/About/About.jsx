@@ -11,6 +11,7 @@ import react_icon from '../../assets/sk8.png'
 import git_icon from '../../assets/sk9.png'
 import npm_icon from '../../assets/npm.png'
 import GitHubCalendar from 'react-github-calendar'
+import {motion} from 'framer-motion'
 
 const About = () => {
   return (
@@ -31,6 +32,7 @@ const About = () => {
           <div className="skills-item"><img src={react_icon} alt="skill" /><p>React JS</p></div>
           <div className="skills-item"><img src={git_icon} alt="skill" /><p>Git</p></div>
           <div className="skills-item"><img src={npm_icon} alt="skill" /><p>Npm</p></div>
+          <div className="skills-item"><img src={java_icon} alt="skill" /><p>Java</p></div>
         </div>
       </div>
 
