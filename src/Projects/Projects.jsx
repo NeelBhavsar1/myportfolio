@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';            // <-- import motion
+import { motion } from 'framer-motion';           
 import './Projects.css';
 import ProjectCard from './ProjectCard/ProjectCard';
 
@@ -9,6 +9,7 @@ import hackathon_icon from '../assets/placeholder.png';
 import weatherapp_icon from '../assets/weather.png';
 import hashing_icon from '../assets/hashing.png';
 import otherprojects_icon from '../assets/github.png';
+import cryptoapp_icon from '../assets/crypto.png'
 
 import { cardvar, containervar } from '../anims';   
 
@@ -27,16 +28,16 @@ const Projects = () => {
       photo: reflexzone_icon,
     },
     {
+      name: "CryptoSentry",
+      desc: "A modern crypto tracking dashboard built with React. It features real-time coin data, search functionality, interactive charts, animations.",
+      link: "https://github.com/NeelBhavsar1/cryptosentry",
+      photo: cryptoapp_icon,
+    },
+    {
       name: "Computer Vision & GAI",
       desc: "Hackathon MVP using computer vision and generative AI to enhance art engagement.",
       link: "https://github.com/NeelBhavsar1/BME-Hackathon-SmartMuseum/tree/main",
       photo: hackathon_icon,
-    },
-    {
-      name: "Weather App",
-      desc: "Weather app built with React and OpenWeatherMap API, focused on clean API handling and state.",
-      link: "https://github.com/NeelBhavsar1/react-weatherapplication",
-      photo: weatherapp_icon,
     },
     {
       name: "Java Hashing GUI",
