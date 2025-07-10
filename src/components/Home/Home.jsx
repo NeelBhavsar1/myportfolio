@@ -17,6 +17,9 @@ const Home = () => {
     window.open('https://github.com/NeelBhavsar1', '_blank');
   };
 
+  console.log('Screen width:', window.innerWidth);
+console.log('Screen height:', window.innerHeight);
+
   return (
     <motion.div
       className="home-container"
