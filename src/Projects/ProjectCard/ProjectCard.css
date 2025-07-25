@@ -13,6 +13,7 @@
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
+  height: 500px;
 }
 
 .projectCard-container:hover {

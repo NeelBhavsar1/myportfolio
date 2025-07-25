@@ -72,7 +72,7 @@ const NavBar = () => {
             onClick={connectHandler}
             whileTap={{ scale: 0.95, rotate: -5 }}
           >
-            Connect with me!
+            <p>Connect</p>
           </motion.button>
         </div>
 

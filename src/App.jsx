@@ -42,7 +42,7 @@ const App = () => {
       <motion.section 
       id="about"
       initial={{opacity: 0,
-        y: 60,
+        y: -60,
       }}
       whileInView={{
         opacity: 1,
@@ -54,7 +54,7 @@ const App = () => {
       }}
       viewport={{
         once: true,
-        amount: 0.3,
+        amount: 0.1,
       }}
       >
         <About />
@@ -79,7 +79,7 @@ const App = () => {
       }}
       viewport={{
         once:true,
-        amount:0.3,
+        amount:0.1,
       }}
       >
         <Achievements />

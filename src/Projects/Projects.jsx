@@ -10,11 +10,18 @@ import weatherapp_icon from '../assets/weather.png';
 import hashing_icon from '../assets/hashing.png';
 import otherprojects_icon from '../assets/github.png';
 import cryptoapp_icon from '../assets/crypto.png'
+import crimsonaiapp_icon from '../assets/crimsonai.png'
 
 import { cardvar, containervar } from '../anims';   
 
 const Projects = () => {
   const projects = [
+    {
+      name: "CrimsonAI",
+      desc: "AI SaaS app built with the PERN stack, featuring Clerk auth, Framer Motion UI, and real-time AI-powered functionality.",
+      link: "https://www.linkedin.com/in/neel-bhavsar-767532238/",
+      photo: crimsonaiapp_icon,
+    },
     {
       name: "Chat App",
       desc: "A real-time chat app built with React and Firebase, featuring authentication, dynamic chat rooms, and instant messaging.",
@@ -38,12 +45,6 @@ const Projects = () => {
       desc: "Hackathon MVP using computer vision and generative AI to enhance art engagement.",
       link: "https://github.com/NeelBhavsar1/BME-Hackathon-SmartMuseum/tree/main",
       photo: hackathon_icon,
-    },
-    {
-      name: "Java Hashing GUI",
-      desc: "Java Swing GUI for hashing passwords using SHA-256 and MD5 with user-friendly controls.",
-      link: "https://github.com/NeelBhavsar1/GUI--hashing-algorithms",
-      photo: hashing_icon,
     },
     {
       name: "Other Projects",
@@ -73,6 +74,8 @@ const Projects = () => {
               desc={desc}
               link={link}
               photo={photo}
+              data lenus
+              data-lenis-scroll
             />
           </motion.div>
         ))}
