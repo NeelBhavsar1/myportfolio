@@ -11,6 +11,8 @@ import react_icon from '../../assets/sk8.png'
 import git_icon from '../../assets/sk9.png'
 import npm_icon from '../../assets/npm.png'
 import GitHubCalendar from 'react-github-calendar'
+import tailwind_icon from '../../assets/sk10.png'
+import next_icon from '../../assets/sk11.png'
 import {motion} from 'framer-motion'
 
 const About = () => {
@@ -33,6 +35,8 @@ const About = () => {
           <div className="skills-item"><img src={git_icon} alt="skill" /><p>Git</p></div>
           <div className="skills-item"><img src={npm_icon} alt="skill" /><p>Npm</p></div>
           <div className="skills-item"><img src={java_icon} alt="skill" /><p>Java</p></div>
+          <div className='skills-item'><img src={tailwind_icon} alt="skill" />TailWind CSS</div>
+          <div className='skills-item'><img src={next_icon} alt="skill" />Next.JS</div>
         </div>
       </div>
 
